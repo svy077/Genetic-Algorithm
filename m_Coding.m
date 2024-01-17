@@ -1,18 +1,18 @@
 function binPop=m_Coding(pop,pop_length,irange_l)
-%% ¶ş½øÖÆ±àÂë£¨Éú³ÉÈ¾É«Ìå£©
-% ÊäÈë£ºpop--ÖÖÈº
-%      pop_length--±àÂë³¤¶È
+%% äºŒè¿›åˆ¶ç¼–ç ï¼ˆç”ŸæˆæŸ“è‰²ä½“ï¼‰
+% è¾“å…¥ï¼špop--ç§ç¾¤
+%      pop_length--ç¼–ç é•¿åº¦
 pop=round((pop-irange_l)*10^6);
-for n=1:size(pop,2) %ÁĞÑ­»·
-    for k=1:size(pop,1) %ĞĞÑ­»·
-        dec2binpop{k,n}=dec2bin(pop(k,n));%dec2binµÄÊä³öÎª×Ö·ûÏòÁ¿£»
-                                          %dec2binpopÊÇcellÊı×é
+for n=1:size(pop,2) %åˆ—å¾ªç¯
+    for k=1:size(pop,1) %è¡Œå¾ªç¯
+        dec2binpop{k,n}=dec2bin(pop(k,n));%dec2binçš„è¾“å‡ºä¸ºå­—ç¬¦å‘é‡ï¼›
+                                          %dec2binpopæ˜¯cellæ•°ç»„
         lengthpop=length(dec2binpop{k,n});
-        for s=1:pop_length-lengthpop %²¹Áã
+        for s=1:pop_length-lengthpop %è¡¥é›¶
             dec2binpop{k,n}=['0' dec2binpop{k,n}];
         end
     end
-    binPop{n}=dec2binpop{k,n};   %È¡dec2binpopµÄµÚkĞĞ
+    binPop{n}=dec2binpop{k,n};   %å–dec2binpopçš„ç¬¬kè¡Œ%%
 end
 
     
